@@ -1,3 +1,15 @@
+# Google cloud credentials, token of service account, service-account.json or simialr
+*.json
+*.key
+
+# Terraform token and auth files
+.terraformrc
+checkpoint*
+
+#hcl files
+*.hcl
+.terraform.lock*
+
 # Local .terraform directories
 **/.terraform/*
 
