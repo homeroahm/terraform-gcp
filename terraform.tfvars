@@ -2,9 +2,9 @@
 #
 # Update values with your environment
 #
-gcp_auth_file         = "./gcp_auth.json"          			#File with service account Key in json format 
+#gcp_auth_file         = "./gcp_auth.json"          			#File with service account Key in json format 
 gcp_project_id        = "crack-photon-306705"         						#Project ID, not the name the Project Id
-billing_account       = "01078F-C588DE-AB53CE"     							#billing account tied to the project Id
+#billing_account       = "01078F-C588DE-AB53CE"     							#billing account tied to the project Id
 
 gcp_region            = "us-central1"
 gcp_zone              = "us-central1-a"
