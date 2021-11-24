@@ -46,9 +46,17 @@ name: 'Terraform'
 
 on:
   push:
-    branches:
-    - main
-  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.tf'
+      - '**.tfvars'
+
+  pull_request: 
+    branches: [ main ]
+    paths:
+      - '**.tf'
+      - '**.tfvars'
+ 
   
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
