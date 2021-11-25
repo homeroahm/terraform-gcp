@@ -9,7 +9,7 @@ variable "terraform_cloud_organisation" {
 variable "gcp_auth_file" {
   type        = string
   description = "GCP authentication file for the GCP service account key in JSON format"
-  default     = "./terraform-svc.json"
+  default     = "./terraform2-sa-key.json"
 }
 
 # Google Cloud variable section

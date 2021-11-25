@@ -1,12 +1,11 @@
-#Store State at Terraform Cloud
+# The block below configures backend to use the 'GCS' bucket.
+# variables or functions cannot be used.
+# validate values match your environment. 
+# specially the bucket value, it should match the bucket you created in GCP. 
 
 terraform {
-  backend "remote" {
-    hostname     = "app.terraform.io"
-    organization = "terraformers21"
-
-    workspaces {
-      name = "gke-infra2"
-    }
+  backend "gcs" {
+    bucket = "terraform-bucket-ycit021"
+    prefix = "terraform/local-module-state"
   }
 }

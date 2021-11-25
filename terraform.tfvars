@@ -2,16 +2,16 @@
 #
 # Update values with your environment
 #
-#gcp_auth_file         = "./gcp_auth.json"          			#File with service account Key in json format 
+#gcp_auth_file         = "./gcp_auth.json" 	#File with service account Key in json format 
 gcp_project_id = "crack-photon-306705" #Project ID, not the name the Project Id
-#billing_account       = "01078F-C588DE-AB53CE"     							#billing account tied to the project Id
+#billing_account        = "01044B-75FD9D-211B6A"     							#billing account tied to the project Id
 
 gcp_region = "us-central1"
 gcp_zone   = "us-central1-a"
 
-org         = "antonio"           # Student initials for instance
-environment = "dev"               #value to be prefixed to resources names to differentiate them
-bucket_name = "tf-bucket-ycit021" # Put the desired GCS Bucket name.
+org         = "antonio"                  # Student initials for instance
+environment = "dev"                      #value to be prefixed to resources names to differentiate them
+bucket_name = "terraform-bucket-ycit021" # Put the desired GCS Bucket name.
 
 #Network related
 
