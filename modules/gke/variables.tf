@@ -1,13 +1,13 @@
 
-variable "billing_account" {
-  type        = string
-  description = "The billing account ID for this project"
-}
+#variable "billing_account" {
+#  type        = string
+#  description = "The billing account ID for this project"
+#}
 
-variable "project_name" {
-  type        = string
-  description = "The human readable project name (min 4 letters)"
-}
+#variable "project_name" {
+#  type        = string
+#  description = "The human readable project name (min 4 letters)"
+#}
 
 variable "gcp_project_id" {
   type        = string

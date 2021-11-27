@@ -65,13 +65,13 @@ module "gke_tformers" {
   source = "./modules/gke"
 
   #PROJECT info
-  billing_account = var.billing_account #
-  project_name    = var.gcp_project_id
-  gcp_region      = var.gcp_region
-  gcp_project_id  = var.gcp_project_id # has to be unique 
-  org             = var.org
-  product         = local.product_string
-  environment     = format("%s", var.environment)
+  #billing_account = var.billing_account #
+  #project_name   = var.gcp_project_id
+  gcp_region     = var.gcp_region
+  gcp_project_id = var.gcp_project_id # has to be unique 
+  org            = var.org
+  product        = local.product_string
+  environment    = format("%s", var.environment)
 
   #VPC specific
   vpc_network     = module.vpc_tformers.vpc_selflink
