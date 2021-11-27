@@ -66,7 +66,7 @@ module "gke_tformers" {
 
   #PROJECT info
   #billing_account = var.billing_account #
-  project_name   = var.gcp_project_id
+  #project_name   = var.gcp_project_id
   gcp_region     = var.gcp_region
   gcp_project_id = var.gcp_project_id # has to be unique 
   org            = var.org

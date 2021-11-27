@@ -9,11 +9,11 @@
 #  description = "The human readable project name (min 4 letters)"
 #}
 
-#variable "gcp_project_id" {
-#  type        = string
-#  description = "The GCP project ID to use for the resource creation"
-#  default     = ""
-#}
+variable "gcp_project_id" {
+  type        = string
+  description = "The GCP project ID to use for the resource creation"
+  default     = ""
+}
 
 variable "gcp_region" {
   type        = string
