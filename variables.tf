@@ -19,10 +19,10 @@ variable "gcp_project_id" {
   description = "The GCP project ID"
 }
 
-variable "billing_account" {
-  type        = string
-  description = "The billing account associated to the project"
-}
+#variable "billing_account" {
+#  type        = string
+#  description = "The billing account associated to the project"
+#}
 
 variable "gcp_region" {
   type        = string
