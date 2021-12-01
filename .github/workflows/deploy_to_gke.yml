@@ -23,7 +23,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: gke-antonio-tformers-default-dev           # TODO: update to cluster name
-  GKE_ZONE: us-central1-a          
+  GKE_ZONE: us-central1          
   DEPLOYMENT_NAME: react-redux-deploy 
   IMAGE: docker.io/homeroahm/react-redux:v1
 
