@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: react-redux
+  name: react-redux
+  namespace: default
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.97.38.78
+  clusterIPs:
+  - 10.97.38.78
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 30637
+    port: 4100
+    protocol: TCP
+    targetPort: 4100
+  selector:
+    app: react-redux
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
