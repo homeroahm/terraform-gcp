@@ -6,12 +6,6 @@ metadata:
   name: react-redux
   namespace: default
 spec:
-  allocateLoadBalancerNodePorts: true
-  clusterIP: 10.97.38.78
-  clusterIPs:
-  - 10.97.38.78
-  externalTrafficPolicy: Cluster
-  internalTrafficPolicy: Cluster
   ports:
   - nodePort: 30637
     port: 4100
