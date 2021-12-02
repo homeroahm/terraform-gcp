@@ -14,8 +14,8 @@ jobs:
         env:
           PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
           APPLICATION_CREDENTIALS: ${{ secrets.GCP_GOOGLE_CREDENTIALS }}
-          CLUSTER_NAME: gke-antonio-tformers-default-dev
-          ZONE_NAME: us-central1-a
+          CLUSTER_NAME: ${{ secrets.CLUSTER_NAME }}
+          ZONE_NAME: ${{ secrets.ZONE_NAME }}
 
       - with: 
           args: get all
