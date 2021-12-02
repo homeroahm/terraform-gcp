@@ -7,15 +7,16 @@ jobs:
   create-vm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
 
-      - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@master
-        with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
-          service_account_key: ${{ secrets.GCP_GOOGLE_CREDENTIALS }}
-          export_default_credentials: true
+      - name: Kubectl - Google Cloud GKE cluster
+        uses: ameydev/gke-kubectl-action@master
+        env:
+          PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+          APPLICATION_CREDENTIALS: ${{ secrets.GCP_GOOGLE_CREDENTIALS }}
+          CLUSTER_NAME: gke-antonio-tformers-default-dev
+          ZONE_NAME: us-central1-a
 
-      - name: kubectl get all
-        run: |
-          kubectl get all
+      - with: 
+          args: get all
+        
