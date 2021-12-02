@@ -15,5 +15,4 @@ spec:
     app: react-redux
   sessionAffinity: None
   type: LoadBalancer
-status:
-  loadBalancer: {}
+
