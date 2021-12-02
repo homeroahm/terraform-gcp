@@ -4,11 +4,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  create-vm:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-
       - name: Kubectl - Google Cloud GKE cluster
         uses: ameydev/gke-kubectl-action@master
         env:
@@ -16,7 +15,6 @@ jobs:
           APPLICATION_CREDENTIALS: ${{ secrets.GCP_GOOGLE_CREDENTIALS }}
           CLUSTER_NAME: ${{ secrets.CLUSTER_NAME }}
           ZONE_NAME: ${{ secrets.ZONE_NAME }}
-
-      - with: 
+        with: 
           args: get all
         
