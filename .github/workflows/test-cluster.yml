@@ -12,7 +12,7 @@ jobs:
         uses: ameydev/gke-kubectl-action@master
         env:
           PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-          APPLICATION_CREDENTIALS: ${{ secrets.GCP_GOOGLE_CREDENTIALS }}
+          APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
           CLUSTER_NAME: ${{ secrets.CLUSTER_NAME }}
           ZONE_NAME: ${{ secrets.ZONE_NAME }}
         with: 
