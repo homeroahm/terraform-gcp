@@ -8,6 +8,6 @@
 terraform {
   backend "gcs" {
     bucket = "terraform-bucket-ycit021"
-    prefix = "terraform/state"
+    prefix = "terraform/state-dev"
   }
 }
