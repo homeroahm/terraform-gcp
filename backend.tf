@@ -3,13 +3,11 @@
 # validate values match your environment. 
 # specially the bucket value, it should match the bucket you created in GCP. 
 
-locals {
-  statefile = format("terraform/state-%s", var.environment)
-}
+
 
 terraform {
   backend "gcs" {
     bucket = "terraform-bucket-ycit021"
-    prefix = local.statefile
+    prefix = format("terraform/state-%s", var.environment)
   }
 }
