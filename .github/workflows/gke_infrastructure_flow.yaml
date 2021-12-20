@@ -50,17 +50,17 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan -var-file="development.tfvars"
+      run: terraform plan 
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
     # On push to main, build or change infrastructure according to Terraform configuration files
     # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
-    - name: Terraform Apply
+    #- name: Terraform Apply
     # if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      run: terraform apply   -var-file="development.tfvars"  -auto-approve
-      env:
-        GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+    #  run: terraform apply  -auto-approve
+    #  env:
+    #    GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
         
   production:
     name: 'Terraform-prod'
@@ -97,7 +97,7 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan -var-file="production.tfvars"
+      run: terraform plan 
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
@@ -105,6 +105,6 @@ jobs:
     # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
     - name: Terraform Apply
     # if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      run: terraform apply   -var-file="production.tfvars"  -auto-approve
+      run: terraform apply  -auto-approve
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
